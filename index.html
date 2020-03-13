@@ -12,7 +12,9 @@
 
   <div class="overlay">
     <div class="overlay-inner">
-      <button class="close">× Close</button>
+      <div id="button-div">
+        <button class="close">× Close</button>
+      </div>
       <img>
     </div>
   </div>
@@ -44,12 +46,16 @@
     p {
       margin: 0 0 20px 0;
     }
-
+    /* #button-div {
+      display: flex;
+      justify-content: end;
+    } */
     .close {
       background: none;
       color: red;
       border: 0;
       background-color: lightgrey;
+      text-transform: uppercase;
     }
 
     .gallery {
@@ -131,6 +137,7 @@
       left: 0;
       display: none;
       z-index: 2;
+      /* display: flex; */
     }
 
     .overlay.open {
