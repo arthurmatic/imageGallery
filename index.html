@@ -46,16 +46,18 @@
     p {
       margin: 0 0 20px 0;
     }
-    /* #button-div {
+    #button-div {
       display: flex;
-      justify-content: end;
-    } */
+      justify-content: flex-end;
+    }
     .close {
       background: none;
       color: red;
       border: 0;
       background-color: lightgrey;
       text-transform: uppercase;
+      margin-bottom: 6px;
+      box-shadow: 0 4px 8px 0 rgba(163, 67, 67, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
     .gallery {
@@ -127,7 +129,9 @@
     .item.h4 {
       grid-column: span 4;
     }
-
+    img {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
     .overlay {
       position: fixed;
       background: rgba(0, 0, 0, 0.7);
@@ -137,7 +141,6 @@
       left: 0;
       display: none;
       z-index: 2;
-      /* display: flex; */
     }
 
     .overlay.open {
@@ -184,7 +187,7 @@
       overlayImage.src = src;
       overlay.classList.add('open');
     }
-
+    
     function close() {
       overlay.classList.remove('open');
     }
@@ -201,7 +204,7 @@
 
     items.forEach(item => item.addEventListener('click', handleClick));
 
-    overlayClose.addEventListener('click', close);
+    overlayClose.addEventListener('click', close,);
   </script>
 </body>
 
